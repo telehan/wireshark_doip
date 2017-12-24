@@ -31,3 +31,18 @@ make[1]: Leaving directory `E:/Project/GitHub/wireshark_doip/plugins/uds/CMakeFi
 make: *** [cmTC_65b91/fast] Error 2
 
 
+Determining if the C compiler works failed with the following output:
+Change Dir: /cygdrive/e/Project/GitHub/wireshark_doip/plugins/uds/CMakeFiles/CMakeTmp
+
+Run Build Command:"/cygdrive/d/QNX650/host/win32/x86/usr/bin/make.exe" "cmTC_757fa/fast"
+D:/QNX650/host/win32/x86/usr/bin/make -f CMakeFiles/cmTC_757fa.dir/build.make CMakeFiles/cmTC_757fa.dir/build
+make[1]: Entering directory `E:/Project/GitHub/wireshark_doip/plugins/uds/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_757fa.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_757fa.dir/testCCompiler.c.o   -c /cygdrive/e/Project/GitHub/wireshark_doip/plugins/uds/CMakeFiles/CMakeTmp/testCCompiler.c
+process_begin: CreateProcess(NULL, /usr/bin/cc -o CMakeFiles/cmTC_757fa.dir/testCCompiler.c.o -c /cygdrive/e/Project/GitHub/wireshark_doip/plugins/uds/CMakeFiles/CMakeTmp/testCCompiler.c, ...) failed.
+make (e=2): 系统找不到指定的文件。
+make[1]: *** [CMakeFiles/cmTC_757fa.dir/testCCompiler.c.o] Error 2
+make[1]: Leaving directory `E:/Project/GitHub/wireshark_doip/plugins/uds/CMakeFiles/CMakeTmp'
+make: *** [cmTC_757fa/fast] Error 2
+
+
