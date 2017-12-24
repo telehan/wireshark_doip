@@ -1,0 +1,66 @@
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c
+
+The output was:
+No such file or directory
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /cygdrive/e/Project/GitHub/wireshark_doip/plugins/doip/CMakeFiles/CMakeTmp
+
+Run Build Command:"/cygdrive/d/QNX650/host/win32/x86/usr/bin/make.exe" "cmTC_1b6b6/fast"
+D:/QNX650/host/win32/x86/usr/bin/make -f CMakeFiles/cmTC_1b6b6.dir/build.make CMakeFiles/cmTC_1b6b6.dir/build
+make[1]: Entering directory `E:/Project/GitHub/wireshark_doip/plugins/doip/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1b6b6.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_1b6b6.dir/testCCompiler.c.o   -c /cygdrive/e/Project/GitHub/wireshark_doip/plugins/doip/CMakeFiles/CMakeTmp/testCCompiler.c
+process_begin: CreateProcess(NULL, /usr/bin/cc -o CMakeFiles/cmTC_1b6b6.dir/testCCompiler.c.o -c /cygdrive/e/Project/GitHub/wireshark_doip/plugins/doip/CMakeFiles/CMakeTmp/testCCompiler.c, ...) failed.
+make (e=2): 系统找不到指定的文件。
+make[1]: *** [CMakeFiles/cmTC_1b6b6.dir/testCCompiler.c.o] Error 2
+make[1]: Leaving directory `E:/Project/GitHub/wireshark_doip/plugins/doip/CMakeFiles/CMakeTmp'
+make: *** [cmTC_1b6b6/fast] Error 2
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c
+
+The output was:
+No such file or directory
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /cygdrive/e/Project/GitHub/wireshark_doip/plugins/doip/CMakeFiles/CMakeTmp
+
+Run Build Command:"/cygdrive/d/QNX650/host/win32/x86/usr/bin/make.exe" "cmTC_92c19/fast"
+D:/QNX650/host/win32/x86/usr/bin/make -f CMakeFiles/cmTC_92c19.dir/build.make CMakeFiles/cmTC_92c19.dir/build
+make[1]: Entering directory `E:/Project/GitHub/wireshark_doip/plugins/doip/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_92c19.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_92c19.dir/testCCompiler.c.o   -c /cygdrive/e/Project/GitHub/wireshark_doip/plugins/doip/CMakeFiles/CMakeTmp/testCCompiler.c
+process_begin: CreateProcess(NULL, /usr/bin/cc -o CMakeFiles/cmTC_92c19.dir/testCCompiler.c.o -c /cygdrive/e/Project/GitHub/wireshark_doip/plugins/doip/CMakeFiles/CMakeTmp/testCCompiler.c, ...) failed.
+make (e=2): 系统找不到指定的文件。
+make[1]: *** [CMakeFiles/cmTC_92c19.dir/testCCompiler.c.o] Error 2
+make[1]: Leaving directory `E:/Project/GitHub/wireshark_doip/plugins/doip/CMakeFiles/CMakeTmp'
+make: *** [cmTC_92c19/fast] Error 2
+
+
