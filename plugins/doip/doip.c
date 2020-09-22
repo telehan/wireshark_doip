@@ -65,7 +65,7 @@ static int hf_doip_length = -1;
 static gboolean doip_desegment = TRUE;
 
 static dissector_handle_t uds_handle = 0;
-
+static dissector_handle_t doip_handle;
 
 static const value_string doip_payloads[] = 
 {
@@ -197,7 +197,7 @@ static int dissect_doip(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, voi
 
 
 /* Register DoIP Protocol header */
-void proto_register_doip_header(void)
+void register_doip_header(void)
 {
     static hf_register_info hf[] = {
         { &hf_doip_version,
@@ -238,7 +238,7 @@ void proto_register_doip(void)
         &ett_doip
     };
 
-    module_t *doip_module; 
+    module_t *doip_module;   
 
     proto_doip = proto_register_protocol (
 	"DoIP Protocol", /* name       */
@@ -255,32 +255,29 @@ void proto_register_doip(void)
     " \"Allow subdissectors to reassemble TCP streams\" in the TCP protocol settings.",
     &doip_desegment);
 
-    proto_register_doip_header();
+    register_doip_header();
     
-    proto_register_generic_header_nack(proto_doip);
+    register_generic_header_nack(proto_doip);
     
-    proto_register_vehicle_identification_eid(proto_doip);
-    proto_register_vehicle_identification_vin(proto_doip);
+    register_vehicle_identification_eid(proto_doip);
+    register_vehicle_identification_vin(proto_doip);
 
-    proto_register_vehicle_announcement_message(proto_doip);
+    register_vehicle_announcement_message(proto_doip);
     
-    proto_register_routing_activation_request(proto_doip);
-    proto_register_routing_activation_response(proto_doip);
+    register_routing_activation_request(proto_doip);
+    register_routing_activation_response(proto_doip);
 
-    proto_register_diagnostic_message(proto_doip);
-    proto_register_diagnostic_message_ack(proto_doip);
-    proto_register_diagnostic_message_nack(proto_doip);
-    
+    register_diagnostic_message(proto_doip);
+    register_diagnostic_message_ack(proto_doip);
+    register_diagnostic_message_nack(proto_doip);
+
     proto_register_subtree_array(ett, array_length(ett));
-    register_dissector ("doip", dissect_doip, proto_doip);
 }
 
 /* Register DoIP Protocol handler */
 void proto_reg_handoff_doip(void)
 {
-    dissector_handle_t doip_handle;
-
-    doip_handle = find_dissector("doip");
+    doip_handle = create_dissector_handle(dissect_doip, proto_doip);
     dissector_add_uint("udp.port", DOIP_PORT, doip_handle);
     dissector_add_uint("tcp.port", DOIP_PORT, doip_handle);
 //    ssl_dissector_add(DOIP_PORT, "doip", TRUE);

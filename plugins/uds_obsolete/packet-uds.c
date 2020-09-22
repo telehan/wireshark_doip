@@ -97,6 +97,7 @@ static const value_string uds_services[] = {
     { 0x76, "TransferData Response" },
     { 0x77, "RequestTransferExit Response" },
     { 0x7D, "WriteMemoryByAddress Response" },
+    { 0x7E, "TesterPresent Response" },
     { 0x7F, "Negative Response" },
 
     { 0xC3, "AccessTimingParameter Response" },
@@ -122,7 +123,7 @@ gint add_header(proto_tree *uds_tree, tvbuff_t *tvb)
 }
 
 /* Uds protocol dissector */
-static int dissect_uds_message(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, void* data)
+static int dissect_uds_message(tvbuff_t *tvb, packet_info *pinfo, proto_tree *tree, void* data _U_)
 {
     gint offset = 0;
     guint8 service = 0;
